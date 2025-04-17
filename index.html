@@ -89,21 +89,16 @@
 
     .iban {
         background-color: #e1f5fe;
-  border-left: 4px solid #0288d1;
-  padding: 12px;
-  margin: 10px 0;
-  position: relative;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  align-items: center; /* Y ekseninde ortalama */
-  justify-content: space-between; /* Sol ve sağda eşit boşluk */
+        border-left: 4px solid #0288d1;
+        padding: 12px;
+        margin: 10px 0;
+        position: relative;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-
-
-
-
-
 
     .iban:hover {
       transform: scale(1.03);
@@ -111,23 +106,23 @@
     }
 
     .iban code {
-  font-size: 16px; /* Font boyutunu küçült */
-  font-weight: 600;
-  color: #01579b;
-  word-wrap: break-word; /* Metni sarmak için */
-  white-space: normal; /* Satırları kırmak için */
-  display: block; /* Alt satıra geçmesini sağlamak için */
-}
+      font-size: 16px;
+      font-weight: 600;
+      color: #01579b;
+      word-wrap: break-word;
+      white-space: normal;
+      display: block;
+    }
 
     .copy-btn {
         position: relative;
-  background-color: #42a5f5;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+        background-color: #42a5f5;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
     }
 
     .copy-btn:hover {
@@ -156,10 +151,6 @@
 
     .instagram {
       background-color: #e91e63;
-    }
-
-    .whatsapp {
-      background-color: #25D366;
     }
 
     @keyframes pulse {
@@ -241,14 +232,10 @@
         <code id="swift">SWIFT/BIC Kodu: TCZBTR2A</code>
         <button class="copy-btn" onclick="copyText('swift')">Kopyala</button>
       </div>
-  
 
     <div class="social-media">
       <a class="instagram" href="https://www.instagram.com/yusufkerem_dmd" target="_blank">
         <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a class="whatsapp" href="https://wa.me/905417120493" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
     </div>
 
