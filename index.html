@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yusuf Kerem'e Destek</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      margin: 0;
+      padding: 0;
+      color: #0d47a1;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+      background-color: #90caf9;
+      border-bottom: 3px solid #42a5f5;
+    }
+
+    header h1 {
+      color: #0d47a1;
+      font-size: 28px;
+    }
+
+    .highlight {
+      color: #d32f2f;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: slideUp 1s ease;
+      position: relative;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .info-box {
+      background-color: #e3f2fd;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
+    }
+
+    .image-section {
+      text-align: center;
+      margin: 20px auto;
+    }
+
+    .image-section img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    .image-section .name {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .iban {
+        background-color: #e1f5fe;
+  border-left: 4px solid #0288d1;
+  padding: 12px;
+  margin: 10px 0;
+  position: relative;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center; /* Y ekseninde ortalama */
+  justify-content: space-between; /* Sol ve sağda eşit boşluk */
+    }
+
+
+
+
+
+
+    .iban:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(2, 136, 209, 0.2);
+    }
+
+    .iban code {
+  font-size: 16px; /* Font boyutunu küçült */
+  font-weight: 600;
+  color: #01579b;
+  word-wrap: break-word; /* Metni sarmak için */
+  white-space: normal; /* Satırları kırmak için */
+  display: block; /* Alt satıra geçmesini sağlamak için */
+}
+
+    .copy-btn {
+        position: relative;
+  background-color: #42a5f5;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .copy-btn:hover {
+      background-color: #1e88e5;
+      transform: scale(1.05);
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .social-media a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 20px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      color: white;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+
+    .instagram {
+      background-color: #e91e63;
+    }
+
+    .whatsapp {
+      background-color: #25D366;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #0d47a1;
+    }
+
+    #toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #42a5f5;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 14px;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span class="highlight">DMD Savaşçımız</span> Yusuf Kerem'e destek ol!</h1>
+    <p>Gelin umutla yürüyelim 💙</p>
+  </header>
+
+  <div class="container">
+    <div class="image-section">
+      <img src="resim.jpg" alt="Yusuf Kerem" />
+      <div class="name">Yusuf Kerem NERGÜZ</div>
+    </div>
+
+    <div class="info-box">
+        Merhaba, ben Yusuf Kerem. Henüz 3 yaşındayım. Geçen yıl biraz hastalanınca hastaneye gittik. Doktorlar bazı testler yaptı ve sonucunda <strong>DMD</strong> adında bir hastalığım olduğu ortaya çıktı.<br><br>
+        Ailem bu habere çok üzüldü ama doktorlar artık bir tedavisi olduğunu söyledi. Bu bizim için çok büyük bir umut oldu.<br><br>
+        Şu anda kaslarım güçlensin diye fizik tedaviye ve yüzmeye gidiyorum. Ama iyileşebilmem için yurt dışında bir tedaviye ihtiyacım varmış.<br><br>
+        Bu yüzden sizin desteğinize çok ihtiyacım var. Hepinize kocaman sarılıyorum. Destekleriniz için çok teşekkür ederim...
+      </div>      
+  
+      <div class="info-box">
+        <strong>İzin No (Valilik):</strong> 21.2025.2965<br>
+        <strong>Alıcı:</strong> Hasret NERGÜZ<br>
+        <strong>Açıklama:</strong> Yusuf Kerem
+      </div>
+  
+      <div class="iban">
+        <code id="try">TL: TR52 0001 0009 0650 2024 8550 07</code>
+        <button class="copy-btn" onclick="copyText('try')">Kopyala</button>
+      </div>
+  
+      <div class="iban">
+        <code id="eur">EURO: TR95 0001 0009 0650 2024 8550 08</code>
+        <button class="copy-btn" onclick="copyText('eur')">Kopyala</button>
+      </div>
+  
+      <div class="iban">
+        <code id="usd">DOLAR: TR25 0001 0009 0650 2024 8550 81</code>
+        <button class="copy-btn" onclick="copyText('usd')">Kopyala</button>
+      </div>
+  
+      <div class="iban">
+        <code id="aed">AED: TR68 0001 0009 0650 2024 8550 10</code>
+        <button class="copy-btn" onclick="copyText('aed')">Kopyala</button>
+      </div>
+  
+      <div class="iban">
+        <code id="swift">SWIFT/BIC Kodu: TCZBTR2A</code>
+        <button class="copy-btn" onclick="copyText('swift')">Kopyala</button>
+      </div>
+  
+
+    <div class="social-media">
+      <a class="instagram" href="https://www.instagram.com/yusufkerem_dmd" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a class="whatsapp" href="https://wa.me/905417120493" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+
+    <div class="footer">
+      Bu sayfa Yusuf Kerem'e destek olmak isteyen güzel kalpli insanlar için oluşturuldu. 💙<br>
+      <strong>Destekleriniz çok kıymetli!</strong>
+    </div>
+  </div>
+
+  <div id="toast">Kopyalandı!</div>
+
+  <script>
+    let currentTimeout;
+    let activeBtn;
+
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      const iban = text.split(': ').pop();
+      navigator.clipboard.writeText(iban).then(() => {
+        showToast("Kopyalandı: " + iban);
+
+        const btns = document.querySelectorAll('.copy-btn');
+        btns.forEach(btn => btn.innerText = "Kopyala");
+
+        const button = document.querySelector(`[onclick="copyText('${id}')"]`);
+        button.innerText = "Kopyalandı";
+        clearTimeout(currentTimeout);
+        currentTimeout = setTimeout(() => {
+          button.innerText = "Kopyala";
+        }, 10000);
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.innerText = message;
+      toast.style.visibility = "visible";
+      toast.style.opacity = "1";
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.visibility = "hidden";
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
