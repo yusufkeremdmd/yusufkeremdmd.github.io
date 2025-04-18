@@ -232,6 +232,79 @@
         <code id="swift">SWIFT/BIC Kodu: TCZBTR2A</code>
         <button class="copy-btn" onclick="copyText('swift')">Kopyala</button>
       </div>
+<!-- Bağış butonları (YENİ EKLENEN KISIM) -->
+<div class="donation-buttons">
+  <a href="https://gofund.me/91c817a9" class="donation-btn gofundme" target="_blank">
+    <i class="fas fa-heart-circle-bolt"></i> GOFUNDME – Yurt dışı bağışı
+  </a>
+  <a href="https://www.paypal.com/donate?campaign_id=LT75L6CSQEDKQ" class="donation-btn paypal" target="_blank">
+    <i class="fab fa-paypal"></i> PAYPAL – Yurt dışı bağışı
+  </a>
+</div>
+
+<style>
+  .donation-buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .donation-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(to right, #00b894, #00cec9);
+    color: white;
+    padding: 16px 28px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse-glow 2s infinite;
+    max-width: 90%;
+  }
+
+  .donation-btn i {
+    font-size: 22px;
+  }
+
+  .donation-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 231, 220, 0.6);
+  }
+
+  .donation-btn.gofundme {
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+  }
+
+  .donation-btn.paypal {
+    background: linear-gradient(to right, #003087, #0070ba);
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 8px rgba(0, 231, 220, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 18px rgba(0, 231, 220, 0.6);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .donation-btn {
+      font-size: 16px;
+      padding: 12px 20px;
+    }
+
+    .donation-btn i {
+      font-size: 20px;
+    }
+  }
+</style>
 
     <div class="social-media">
       <a class="instagram" href="https://www.instagram.com/yusufkerem_dmd" target="_blank">
