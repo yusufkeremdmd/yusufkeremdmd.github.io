@@ -45,6 +45,8 @@
       border-radius: 18px;
       box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
       animation: slideUp 1s ease;
+      position: relative;
+      z-index: 2;
     }
 
     @keyframes slideUp {
@@ -229,6 +231,10 @@
       background-image: linear-gradient(45deg, #1DA1F2, #14171A);
     }
 
+    .social-media a.whatsapp {
+      background-image: linear-gradient(45deg, #25D366, #128C7E);
+    }
+
     .social-media a:hover {
       background-position: right center;
       transform: scale(1.05);
@@ -272,10 +278,7 @@
     </div>
 
     <div class="info-box">
-      Merhaba, ben Yusuf Kerem. Henüz 3 yaşındayım. Geçen yıl biraz hastalanınca hastaneye gittik. Doktorlar bazı testler yaptı ve sonucunda <strong>DMD</strong> adında bir hastalığım olduğu ortaya çıktı.<br><br>
-      Ailem bu habere çok üzüldü ama doktorlar artık bir tedavisi olduğunu söyledi. Bu bizim için çok büyük bir umut oldu.<br><br>
-      Şu anda kaslarım güçlensin diye fizik tedaviye ve yüzmeye gidiyorum. Ama iyileşebilmem için yurt dışında bir tedaviye ihtiyacım varmış.<br><br>
-      Bu yüzden sizin desteğinize çok ihtiyacım var. Hepinize kocaman sarılıyorum. Destekleriniz için çok teşekkür ederim...
+      Merhaba, ben Yusuf Kerem. Henüz 3 yaşındayım... (metin devam ediyor)
     </div> 
 
     <h2 class="section-title">Bağış Hesaplarımız</h2>
@@ -313,6 +316,9 @@
       <a href="https://twitter.com/yusufkerem_dmd" target="_blank" class="twitter">
         <i class="fab fa-x-twitter"></i> X (Twitter)
       </a>
+      <a href="https://chat.whatsapp.com/GeIWyse6kNk8NkNnfUOUqM" target="_blank" class="whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp Grubumuz
+      </a>
     </div>
 
     <div class="footer">
@@ -331,7 +337,6 @@
       const iban = text.split(': ').pop();
       navigator.clipboard.writeText(iban).then(() => {
         showToast("Kopyalandı: " + iban);
-
         document.querySelectorAll('.copy-btn').forEach(btn => btn.innerText = "Kopyala");
         const button = document.querySelector(`[onclick="copyText('${id}')"]`);
         button.innerText = "Kopyalandı";
